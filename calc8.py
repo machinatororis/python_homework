@@ -1,6 +1,5 @@
 import math
 
-
 def addition(x, y):
     return x + y
 
@@ -12,6 +11,15 @@ def multiplication(x, y):
 
 def division(x, y):
     return x / y
+
+def exponentiation(x, y):
+    return a ** b
+
+def square_roots(x):
+    return math.sqrt(x)
+
+def cube_roots(x):
+    return (pow(x, 1 / 3))
 
 
 while True:
@@ -54,19 +62,19 @@ while True:
         print("Введіть числа для операції: ")
         a = float(input("a = "))
         b = float(input("b = "))
-        result = a ** b
+        result = exponentiation(a, b)
         print(f"Результат операції = {result}")
     elif operation == 6:
         print("Ви обрали операцію квадратний корінь.")
         print("Введіть число для операції: ")
         a = float(input("a = "))
-        result = math.sqrt(a)
+        result = square_roots(a)
         print(f"Результат операції = {result}")
     elif operation == 7:
         print("Ви обрали операцію кубічний корінь.")
         print("Введіть число для операції: ")
         a = float(input("a = "))
-        result = (pow(a, 1 / 3))
+        result = cube_roots(a)
         print(f"Результат операції = {result}")
 
 print(f"Робота калькулятора завершена!")
